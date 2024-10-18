@@ -13,10 +13,10 @@ vim.keymap.set('x', '<leader>p', [["_dP]])
 vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostic [Q]uickfix list' })
 
 -- Go through the quickfix/error list
-vim.keymap.set('n', '<C-k>', '<cmd>cnext<CR>zz')
-vim.keymap.set('n', '<C-j>', '<cmd>cprev<CR>zz')
-vim.keymap.set('n', '<leader>k', '<cmd>lnext<CR>zz')
-vim.keymap.set('n', '<leader>j', '<cmd>lprev<CR>zz')
+vim.keymap.set('n', '<C-k>', '<cmd>cprev<CR>zz', { desc = 'Quickfix Prev' })
+vim.keymap.set('n', '<C-j>', '<cmd>cnext<CR>zz', { desc = 'Quickfix Next' })
+vim.keymap.set('n', '<leader>k', '<cmd>lprev<CR>zz', { desc = 'Error Prev' })
+vim.keymap.set('n', '<leader>j', '<cmd>lnext<CR>zz', { desc = 'Error Next' })
 
 -- Exit terminal mode in the builtin terminal with a shortcut that is a bit easier
 -- for people to discover. Otherwise, you normally need to press <C-\><C-n>, which
@@ -33,11 +33,11 @@ vim.keymap.set('t', '<Esc><Esc>', '<C-\\><C-n>', { desc = 'Exit terminal mode' }
 --  Try it with `yap` in normal mode
 --  See `:help vim.highlight.on_yank()`
 vim.api.nvim_create_autocmd('TextYankPost', {
-    desc = 'Highlight when yanking (copying) text',
-    group = vim.api.nvim_create_augroup('kickstart-highlight-yank', { clear = true }),
-    callback = function()
-        vim.highlight.on_yank()
-    end,
+  desc = 'Highlight when yanking (copying) text',
+  group = vim.api.nvim_create_augroup('kickstart-highlight-yank', { clear = true }),
+  callback = function()
+    vim.highlight.on_yank()
+  end,
 })
 
 -- vim: ts=2 sts=2 sw=2 et
