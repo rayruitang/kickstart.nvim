@@ -17,14 +17,14 @@ return {
     }
   end,
   config = function()
-    vim.keymap.set('n', '<leader>vb', '<cmd>VimtexCompile<CR>', { desc = '[V]imtex [B]uild' })
-    vim.keymap.set('n', '<leader>vi', '<cmd>VimtexTocOpen<CR>', { desc = '[V]imtex [I]ndex' })
-    vim.keymap.set('n', '<leader>vv', '<cmd>VimtexView<CR>', { desc = '[V]imtex [V]iew' })
-    vim.keymap.set('n', '<leader>vc', '<cmd>:VimtexClearCache All<CR>', { desc = '[V]imtex [C]lear Cache' })
-    vim.keymap.set('n', '<leader>vC', '<cmd>VimtexClean<CR>', { desc = '[V]imtex [C]lean Aux' })
-    vim.keymap.set('n', '<leader>ve', '<cmd>VimtexErrors<CR>', { desc = '[V]imtex [E]rrors' })
-    vim.keymap.set('n', '<leader>vm', '<plug>(vimtex-context-menu)', { desc = '[V]imtex [M]enu' })
-    vim.keymap.set('n', '<leader>vw', '<cmd>VimtexCountWords!<CR>', { desc = '[V]imtex Count [W]ords' })
+    vim.keymap.set('n', '<leader>vb', '<cmd>VimtexCompile<CR>', { desc = '[v]imtex [b]uild' })
+    vim.keymap.set('n', '<leader>vi', '<cmd>VimtexTocOpen<CR>', { desc = '[v]imtex [i]ndex' })
+    vim.keymap.set('n', '<leader>vv', '<cmd>VimtexView<CR>', { desc = '[v]imtex [v]iew' })
+    vim.keymap.set('n', '<leader>vc', '<cmd>:VimtexClearCache All<CR>', { desc = '[v]imtex [c]lear cache' })
+    vim.keymap.set('n', '<leader>vk', '<cmd>VimtexClean<CR>', { desc = '[v]imtex [k]ill auxfiles' })
+    vim.keymap.set('n', '<leader>ve', '<cmd>VimtexErrors<CR>', { desc = '[v]imtex [e]rrors' })
+    vim.keymap.set('n', '<leader>vm', '<plug>(vimtex-context-menu)', { desc = '[v]imtex [m]enu' })
+    vim.keymap.set('n', '<leader>vw', '<cmd>VimtexCountWords!<CR>', { desc = '[v]imtex count [w]ords' })
   end,
 }
 -- vim: ts=2 sts=2 sw=2 et

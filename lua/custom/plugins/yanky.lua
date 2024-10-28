@@ -36,4 +36,7 @@ return {
       enabled = true,
     },
   },
+  config = function()
+    vim.keymap.set('n', '<leader>sy', '<cmd>YankyRingHistory<CR>', { desc = '[s]earch [y]anks' })
+  end,
 }
